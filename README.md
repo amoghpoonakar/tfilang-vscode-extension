@@ -75,7 +75,6 @@ Example mappings:
 | `paadu_gajaala` | `print`           |
 | `idhigo`        | `input`           |
 | `enthundi`      | `len`             |
-| `ikkadidhaaka`  | `range`           |
 | `yentidhi`      | `type`            |
 
 ---
@@ -172,7 +171,7 @@ tfi <filename>
 
 # Release Notes
 
-### Version 0.0.1
+### Version 1.0.0
 
 Initial release including:
 

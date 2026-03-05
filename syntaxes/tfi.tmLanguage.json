@@ -63,7 +63,7 @@
 
     {
       "name": "entity.name.function.tfi",
-      "match": "\\b(paadu_gajaala|idhigo|enthundi|ikkadidhaaka)\\b"
+      "match": "\\b(paadu_gajaala|idhigo|enthundi)\\b"
     },
 
     {

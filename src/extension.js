@@ -10,7 +10,7 @@ function activate(context) {
     ];
 
     const builtinFunctions = [
-        "paadu_gajaala", "idhigo", "enthundi", "ikkadidhaaka", "yentidhi"
+        "paadu_gajaala", "idhigo", "enthundi", "yentidhi"
     ];
 
     const listMethods = [
@@ -31,7 +31,6 @@ function activate(context) {
         "paadu_gajaala": "print",
         "idhigo": "input",
         "enthundi": "len",
-        "ikkadidhaaka": "range",
         "yentidhi": "type"
     };
 
