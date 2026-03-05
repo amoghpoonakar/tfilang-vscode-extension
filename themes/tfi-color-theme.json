@@ -1,0 +1,106 @@
+{
+  "name": "TFILang Colors",
+  "type": "dark",
+  "semanticHighlighting": true,
+  "tokenColors": [
+    {
+      "scope": "keyword.control.flow.tfi",
+      "settings": {
+        "foreground": "#FF8FA3"
+      }
+    },
+    {
+      "scope": "keyword.control.logic.tfi",
+      "settings": {
+        "foreground": "#7FD7FF"
+      }
+    },
+    {
+      "scope": "entity.name.function.tfi",
+      "settings": {
+        "foreground": "#DCDCAA"
+      }
+    },
+    {
+      "scope": "storage.type.tfi",
+      "settings": {
+        "foreground": "#8BE9A8"
+      }
+    },
+    {
+      "scope": "keyword.declaration.idhi.tfi",
+      "settings": {
+        "foreground": "#FF6B81",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "keyword.control.tfi",
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "scope": "keyword.control.fstring.tfi",
+      "settings": {
+        "foreground": "#00FFFF"
+      }
+    },
+    {
+      "scope": "entity.name.function.tfi",
+      "settings": {
+        "foreground": "#DCDCAA"
+      }
+    },
+    {
+      "scope": "support.function.method.tfi",
+      "settings": {
+        "foreground": "#C586C0"
+      }
+    },
+    {
+      "scope": [
+        "string.quoted.double.tfi",
+        "string.quoted.single.tfi",
+        "string.interpolated.double.tfi",
+        "string.interpolated.single.tfi"
+      ],
+      "settings": {
+        "foreground": "#CE9178"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.section.interpolation.begin.tfi",
+        "punctuation.section.interpolation.end.tfi"
+      ],
+      "settings": {
+        "foreground": "#FF79C6"
+      }
+    },
+    {
+      "scope": "constant.numeric.tfi",
+      "settings": {
+        "foreground": "#B5CEA8"
+      }
+    },
+    {
+      "scope": "comment.line.number-sign.tfi",
+      "settings": {
+        "foreground": "#6A9955",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "keyword.operator.tfi",
+      "settings": {
+        "foreground": "#9CDCFE"
+      }
+    }
+  ],
+  "semanticTokenColors": {
+    "tfiVariableUsed": "#4FC1FF",
+    "tfiVariableUnused": "#9e9e9e",
+    "tfiFunction": "#DCDCAA"
+  }
+}

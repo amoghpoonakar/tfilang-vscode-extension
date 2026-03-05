@@ -1,0 +1,116 @@
+{
+  "scopeName": "source.tfi",
+  "patterns": [
+    {
+      "name": "comment.line.number-sign.tfi",
+      "match": "#.*$"
+    },
+    {
+      "name": "string.interpolated.double.tfi",
+      "begin": "(f)(?=\".*\\{.*\\}\")\"",
+      "beginCaptures": {
+        "1": { "name": "keyword.control.fstring.tfi" },
+        "0": { "name": "punctuation.definition.string.begin.tfi" }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.tfi" }
+      },
+      "patterns": [
+        { "include": "#fstring_interpolation" }
+      ]
+    },
+    {
+      "name": "string.interpolated.single.tfi",
+      "begin": "(f)(?='.*\\{.*\\}')'",
+      "beginCaptures": {
+        "1": { "name": "keyword.control.fstring.tfi" },
+        "0": { "name": "punctuation.definition.string.begin.tfi" }
+      },
+      "end": "'",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.tfi" }
+      },
+      "patterns": [
+        { "include": "#fstring_interpolation" }
+      ]
+    },
+    {
+      "name": "string.quoted.double.tfi",
+      "begin": "\"",
+      "end": "(?<!\\\\)\""
+    },
+    {
+      "name": "string.quoted.single.tfi",
+      "begin": "'",
+      "end": "(?<!\\\\)'"
+    },
+
+    {
+      "name": "keyword.declaration.idhi.tfi",
+      "match": "\\b(idhi)\\b"
+    },
+
+    {
+      "name": "keyword.control.flow.tfi",
+      "match": "\\b(aite|lekapothe|kakapothe|enthavaraku|ippudu|anna_idhi|final_ga|aapeyyali)\\b"
+    },
+
+    {
+      "name": "keyword.control.logic.tfi",
+      "match": "\\b(mari|leda|kaadhu|Bokka)\\b"
+    },
+
+    {
+      "name": "entity.name.function.tfi",
+      "match": "\\b(paadu_gajaala|idhigo|enthundi|ikkadidhaaka)\\b"
+    },
+
+    {
+      "name": "storage.type.tfi",
+      "match": "\\b(yentidhi)\\b"
+    },
+
+    {
+      "name": "support.function.method.tfi",
+      "match": "\\.(pettaraa|petteyyi|akkadaPettu|teseyyi|yellipo|yekkada|lekkettu|saduruko|tippeyyi|tashkarinchu)"
+    },
+
+    {
+      "name": "constant.numeric.tfi",
+      "match": "\\b[0-9]+\\b"
+    },
+
+    {
+      "name": "keyword.operator.tfi",
+      "match": "(\\+|\\-|\\*|\\/|==|!=|<=|>=|<|>|=)"
+    }
+  ],
+
+  "repository": {
+    "fstring_interpolation": {
+      "patterns": [
+        {
+          "name": "meta.interpolation.tfi",
+          "begin": "\\{",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.section.interpolation.begin.tfi"
+            }
+          },
+          "end": "\\}",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.interpolation.end.tfi"
+            }
+          },
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "name": "tfilang",
+  "displayName": "TFILang — Official Language Support",
+  "description": "Official Visual Studio Code support for TFILang",
+  "version": "1.0.0",
+  "publisher": "AmoghVP",
+  "license": "MIT",
+  "icon": "images/tfi-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amoghpoonakar/tfilang-vscode-extension.git"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:tfi",
+    "onCommand:tfilang.execute"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "configurationDefaults": {
+      "[tfi]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.tokenColorCustomizations": {
+          "semanticHighlighting": true
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "tfi",
+        "aliases": [
+          "TFILang",
+          "tfi"
+        ],
+        "extensions": [
+          ".tfi"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./images/tfi-icon.png",
+          "dark": "./images/tfi-icon.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "tfi",
+        "scopeName": "source.tfi",
+        "path": "./syntaxes/tfi.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "TFILang Colors",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tfi-color-theme.json"
+      }
+    ],
+    "semanticTokenTypes": [
+      {
+        "id": "tfiVariableUsed",
+        "description": "Used variable"
+      },
+      {
+        "id": "tfiVariableUnused",
+        "description": "Unused variable"
+      },
+      {
+        "id": "tfiFunction",
+        "description": "TFILang function"
+      },
+      {
+        "id": "tfiKeyword",
+        "description": "TFILang Keyword"
+      }
+    ],
+    "semanticTokenScopes": [
+      {
+        "language": "tfi",
+        "scopes": {
+          "tfiVariableUsed": [
+            "variable.parameter.tfi"
+          ],
+          "tfiVariableUnused": [
+            "comment.unused.tfi"
+          ],
+          "tfiFunction": [
+            "entity.name.function.tfi"
+          ],
+          "tfiKeyword": [
+            "keyword.control.tfi"
+          ]
+        }
+      }
+    ],
+    "commands": [
+      {
+        "command": "tfilang.execute",
+        "title": "Run TFILang",
+        "icon": {
+          "light": "images/run.svg",
+          "dark": "images/run.svg"
+        }
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "tfilang.execute",
+          "when": "resourceExtname == .tfi",
+          "group": "navigation"
+        }
+      ]
+    }
+  }
+}
